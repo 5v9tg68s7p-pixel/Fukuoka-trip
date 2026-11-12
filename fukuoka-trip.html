@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>福岡八日遊</title><link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet"><style>
+:root{--paper:#FFFCF6;--ink:#3E3A39;--coral:#F2A497;--yellow:#F6D27A;--sky:#A8D3E6;--green:#B9DAA5}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--paper);color:var(--ink);font-family:"Huninn",sans-serif;line-height:1.6;padding-bottom:40px}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;background:var(--paper);border-bottom:3px solid var(--ink);display:flex;gap:6px;padding:8px 10px;overflow-x:auto}
+nav a{flex:none;color:var(--ink);text-decoration:none;font-size:14px;padding:4px 12px;border:3px solid var(--ink);border-radius:999px}
+nav a:nth-child(4n+1){background:var(--coral)}nav a:nth-child(4n+2){background:var(--yellow)}nav a:nth-child(4n+3){background:var(--sky)}nav a:nth-child(4n){background:var(--green)}
+main{max-width:640px;margin:0 auto;padding:70px 14px 0}
+section{margin-top:28px}h2{font-size:22px;margin-bottom:12px}
+.card{background:var(--paper);border:3px solid var(--ink);border-radius:24px;padding:16px;margin-bottom:12px}
+.hero{background:var(--sky);text-align:center;padding:0;overflow:hidden}
+.hero svg{display:block;width:100%;height:auto}
+.hero .t{background:var(--paper);border-top:3px solid var(--ink);padding:14px}
+.hero h1{font-size:28px}
+.sample{display:inline-block;background:var(--yellow);border:2px solid var(--ink);border-radius:999px;font-size:12px;padding:0 10px}
+.count{display:flex;gap:8px;justify-content:center;margin-top:10px}
+.count div{background:var(--yellow);border:3px solid var(--ink);border-radius:16px;padding:4px 10px;min-width:64px}
+.count b{display:block;font-size:24px}
+.flight{background:var(--sky)}
+.flight .row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.flight .big{font-size:24px}
+.flight .mid{flex:1;text-align:center;font-size:12px;border-bottom:3px dashed var(--ink)}
+.flight hr{border:0;border-top:3px dashed var(--ink);margin:12px 0}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px}
+.tabs button{flex:none;font:inherit;color:var(--ink);background:var(--paper);border:3px solid var(--ink);border-radius:18px;padding:4px 14px;cursor:pointer;line-height:1.3}
+.tabs button.on{background:var(--coral)}
+.tl{position:relative;padding-left:26px}
+.tl:before{content:"";position:absolute;left:8px;top:6px;bottom:6px;border-left:3px dashed var(--ink)}
+.ev{position:relative;background:var(--paper);border:3px solid var(--ink);border-radius:20px;padding:10px 14px;margin-bottom:12px}
+.ev:before{content:"";position:absolute;left:-26px;top:14px;width:14px;height:14px;border:3px solid var(--ink);border-radius:50%;background:var(--yellow)}
+.ev .time{font-size:13px}.ev h3{font-size:17px}
+.tag{display:inline-block;font-size:12px;border:2px solid var(--ink);border-radius:999px;padding:0 9px;margin-right:4px}
+.交通{background:var(--sky)}.飲食{background:var(--yellow)}.景點{background:var(--green)}.購物{background:var(--coral)}.住宿,.其他{background:var(--paper)}
+.must{background:var(--coral);border:2px solid var(--ink);border-radius:8px;font-size:12px;padding:0 6px;margin-left:6px;vertical-align:middle}
+a.map{color:var(--ink);font-size:12px;border:2px solid var(--ink);border-radius:999px;padding:0 8px;text-decoration:none;background:var(--paper)}
+.note{font-size:13px;background:var(--yellow);border:3px solid var(--ink);border-radius:20px;padding:10px 14px}
+h4{margin-bottom:6px}
+.pop{animation:pop .5s cubic-bezier(.3,1.6,.5,1) both}
+@keyframes pop{0%{transform:scale(.8) translateY(14px);opacity:0}100%{transform:none;opacity:1}}
+ul.ck{list-style:none;padding:0}.ck li{margin:6px 0}
+.ck label{display:flex;gap:10px;align-items:center;cursor:pointer}
+.ck input{appearance:none;-webkit-appearance:none;flex:none;width:24px;height:24px;border:3px solid var(--ink);border-radius:8px;background:var(--paper);cursor:pointer;display:grid;place-items:center}
+.ck input:checked{background:var(--green)}.ck input:checked:after{content:"✓";font-size:16px;line-height:1}
+.ck input:checked+span{text-decoration:line-through;opacity:.55}
+.hotel{background:var(--yellow)}.hotel p{font-size:14px}
+.bar{height:16px;border:3px solid var(--ink);border-radius:999px;overflow:hidden;margin-bottom:10px}
+.bar i{display:block;height:100%;width:0;background:var(--green);transition:width .4s}
+.fl{animation:fl 4s ease-in-out infinite}.fl2{animation:fl 5s ease-in-out infinite reverse}
+.drift{animation:dr 9s ease-in-out infinite alternate}
+@keyframes fl{50%{transform:translateY(-6px)}}
+@keyframes dr{to{transform:translateX(30px)}}
+footer{text-align:center;font-size:12px;margin-top:30px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style></head><body>
+<nav><a href="#top">首頁</a><a href="#flight">航班</a><a href="#days">行程</a><a href="#stay">住宿</a><a href="#pre">出發前</a><a href="#bag">行李</a></nav>
+<main id="top"><div class="card hero"><svg viewBox="0 0 400 240" role="img" aria-label="福岡插圖">
+<rect width="400" height="240" fill="#A8D3E6"/>
+<g class="drift"><ellipse cx="80" cy="45" rx="34" ry="14" fill="#FFFCF6" stroke="#3E3A39" stroke-width="3"/><ellipse cx="105" cy="38" rx="20" ry="11" fill="#FFFCF6" stroke="#3E3A39" stroke-width="3"/></g>
+<circle cx="45" cy="95" r="20" fill="#F6D27A" stroke="#3E3A39" stroke-width="3"/>
+<g class="fl"><path d="M250 50 h60 l12 -8 l-4 14 l-8 6 h-60Z" fill="#FFFCF6" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/><path d="M250 50 l-12 -12 h10 l12 12" fill="#F2A497" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/></g>
+<path d="M0 170 H400 V240 H0Z" fill="#B9DAA5" stroke="#3E3A39" stroke-width="3"/>
+<path d="M0 170 q50 -14 100 0 t100 0 t100 0 t100 0" fill="#A8D3E6" stroke="#3E3A39" stroke-width="3"/>
+<g class="fl2"><path d="M300 170 L318 50 L336 170Z" fill="#FFFCF6" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/><path d="M308 110 H328 M304 140 H332 M312 80 H324" stroke="#3E3A39" stroke-width="3"/><path d="M318 50 V28" stroke="#3E3A39" stroke-width="3" stroke-linecap="round"/><circle cx="318" cy="28" r="5" fill="#F2A497" stroke="#3E3A39" stroke-width="3"/></g>
+<rect x="60" y="150" width="110" height="60" rx="12" fill="#F6D27A" stroke="#3E3A39" stroke-width="3"/>
+<path d="M52 150 H178 L168 128 H62Z" fill="#F2A497" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/>
+<ellipse cx="115" cy="180" rx="30" ry="14" fill="#FFFCF6" stroke="#3E3A39" stroke-width="3"/>
+<path d="M85 180 q30 28 60 0Z" fill="#FFFCF6" stroke="#3E3A39" stroke-width="3"/>
+<g class="fl2"><path d="M105 168 q-6 -12 2 -20 M122 168 q-6 -12 2 -20" stroke="#3E3A39" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+</svg><div class="t"><h1>🇯🇵 福岡八日遊</h1><p>2025/03/01 – 03/08・香港快運</p><div class="count" id="count"></div></div></div>
+<section id="flight"><h2>✈ 航班</h2><div class="card flight"><span class="sample">去程</span> 香港快運 UO748
+<div class="row"><div><div class="big">香港 HKG</div>12:55</div><div class="mid">3/1（Day 1）</div><div style="text-align:right"><div class="big">福岡 FUK</div>17:05</div></div>
+<hr><span class="sample">回程</span> 香港快運 UO749
+<div class="row"><div><div class="big">福岡 FUK</div>16:05</div><div class="mid">3/8（Day 8）</div><div style="text-align:right"><div class="big">香港 HKG</div>19:00</div></div></div></section>
+<section id="days"><h2>🗓 每日行程</h2><p class="note" style="margin-bottom:10px">「必去」＝Notion 分類為「景點」的項目。「備選」是同一時段的候選餐廳。</p><div class="tabs" id="tabs"></div><div class="tl" id="tl"></div></section>
+<section id="stay"><h2>🏨 住宿</h2>
+<div class="card hotel"><h3>Lamp Light Books Hotel（天神）</h3><p>Day 1 抵達福岡後入住</p><p><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Lamp+Light+Books+Hotel+Tenjin+Fukuoka">地圖</a></p></div>
+<div class="card hotel"><h3>博多 Mars Garden Hotel</h3><p>Day 5 早上 09:00 有列出，Notion 未註明入住與退房日。</p><p><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Hakata+Mars+Garden+Hotel">地圖</a></p></div></section>
+<section id="pre"><h2>📋 出發前待辦</h2><div class="card"><div class="bar"><i id="b-pre"></i></div><ul class="ck" id="pre-l"></ul></div></section>
+<section id="bag"><h2>🧳 行李清單</h2>
+<div class="card"><h4>托運行李</h4><div class="bar"><i id="b-chk"></i></div><ul class="ck" id="chk-l"></ul></div>
+<div class="card"><h4>隨身行李</h4><div class="bar"><i id="b-carry"></i></div><ul class="ck" id="carry-l"></ul></div></section>
+<footer>資料來自 Notion「Fukuoka (2025)」</footer></main>
+<script>const days=[{"d": "3/1", "t": "抵達・天神", "e": [["12:55-17:05", "香港⮕香港快運⮕福岡 (UO748)", ["交通"], 0], ["17:05-18:00", "福岡機場⮕酒店（天神 Lamp Light Books Hotel）", ["交通", "住宿"], 1], ["19:00-20:00", "岩田屋新館 7/F", ["購物"], 1], ["19:00", "Human Made", ["購物"], 0], ["20:00-21:00", "Mont-bell", ["購物"], 1], ["20:00-21:00", "Drugs Eleven", ["購物"], 0], ["21:00-22:00", "宵夜：一蘭拉麵／串燒", ["飲食"], 1], ["21:00-22:00", "宵夜：元祖樂天地牛腸鍋", ["飲食"], 1], ["21:30-22:30", "晚餐：Hakata Motsushō", ["飲食"], 1], ["22:00-23:00", "玩樂：Taito／Round 1／GiGO", ["其他"], 1], ["23:00-00:00", "Donki 天神本店", ["購物"], 1], ["23:00-00:00", "宵夜：餃子拉麵酒場 暖暮", ["飲食"], 1], ["24:00", "Family Mart", ["飲食", "購物"], 0]]}, {"d": "3/2", "t": "天神購物日", "e": [["09:30-10:15", "Menya ISHII", ["飲食"], 1], ["11:00-12:00", "Guf Fukuoka", ["飲食"], 1], ["12:00", "松本清", ["購物"], 0], ["13:30-16:30", "天神購物區（潮鋪／岩田屋／Parco）", ["購物"], 1], ["15:00", "Freak’s Store", ["購物"], 0], ["15:00-16:00", "麵屋兼虎 博多 DEITOS 店", ["飲食"], 1], ["17:00-20:00", "天神購物區（潮鋪／岩田屋／Parco）", ["購物"], 1], ["18:00-18:45", "cafe TANNAL", ["飲食"], 0], ["20:00-21:00", "BIC Camera 2 號店（藥妝）", ["購物"], 1], ["21:15-22:15", "晚餐：Hakata Tempura NAGAOKA", ["飲食"], 1], ["22:00-00:00", "宵夜：一蘭拉麵／串燒", ["飲食"], 1], ["22:15-23:00", "玩樂：Taito／Round 1／GiGO", ["其他"], 1], ["23:00-00:00", "Donki 天神本店", ["購物"], 1]]}, {"d": "3/3", "t": "柳橋市場・天神", "e": [["09:00-10:30", "柳橋連合市場", ["飲食"], 1], ["09:30-10:00", "F-Concept", ["飲食"], 0], ["11:00-12:00", "Mei Cafe", ["飲食"], 1], ["12:15-12:30", "早餐：I’m donut?", ["飲食"], 1], ["12:30-18:30", "天神購物區（潮鋪／岩田屋／Parco）", ["購物"], 1], ["14:00", "Shiro", ["購物"], 0], ["14:00-14:15", "Marks & Web", ["購物"], 0], ["14:30", "Cle de Peau", ["購物"], 0], ["15:00-15:25", "Comme des Garçons", ["購物"], 0], ["15:30-16:00", "下午茶：水果派 Qu'il fait bon", ["飲食"], 1], ["17:00", "Truffle Bakery", ["飲食"], 0], ["18:30-20:15", "天神地下街", ["購物"], 1], ["20:15-22:00", "大炮拉麵 天神今泉店", ["飲食"], 1], ["22:00-00:00", "宵夜：鳥貴族", ["飲食"], 1], ["22:15-23:00", "玩樂：Taito／Round 1／GiGO", ["其他"], 1], ["23:00-00:00", "Donki 天神本店", ["購物"], 1], ["24:00", "7-11", ["購物"], 0]]}, {"d": "3/4", "t": "博多散策", "e": [["08:30-09:30", "Fuk Coffee", ["飲食"], 1], ["09:00-10:00", "早餐：The Full Full Hakata", ["飲食"], 1], ["10:30", "Aux Paradise", ["購物"], 0], ["10:30-14:00", "AMU Plaza 博多", ["購物"], 1], ["11:50", "富澤商店", ["購物"], 0], ["12:00", "Longchamp", ["購物"], 0], ["12:30-13:15", "午餐：麵屋 最後の一滴", ["飲食"], 1], ["13:50-14:50", "信洲蕎麥麵", ["飲食"], 0], ["14:00-14:45", "蜂樂饅頭", ["飲食"], 1], ["14:15-15:15", "午餐：Hakata Seafood Uoden", ["飲食"], 1], ["15:30-20:00", "Mina 天神（GU、Uniqlo）", ["購物"], 1], ["19:00", "無印良品", ["購物"], 0], ["20:30-21:30", "晚餐：三原豆腐店", ["飲食"], 1], ["21:00-01:00", "Kawaya Gion 燒鳥店（備選）", ["飲食"], 1], ["21:00-00:00", "利九牛舌（備選）", ["飲食"], 1], ["21:00-00:00", "APOC Coffee（備選）", ["飲食"], 1], ["21:00-23:00", "長浜拉麵（備選）", ["飲食"], 0], ["21:30-22:00", "NAMCO", ["其他"], 1]]}, {"d": "3/5", "t": "運河城・車站", "e": [["09:00-09:45", "博多 Mars Garden Hotel", ["住宿"], 1], ["10:00-11:30", "博多運河城 Shopping", ["購物"], 1], ["11:30-12:30", "Sushi Souten（Omakase）", ["飲食"], 1], ["12:30-14:00", "博多運河城 Shopping", ["購物"], 1], ["16:00-17:30", "晚餐：Yakiniku AGITO HIRAO", ["飲食"], 1], ["18:00-21:00", "博多車站", ["購物"], 1], ["21:00-01:00", "Kawaya Gion 燒鳥店（備選）", ["飲食"], 1], ["21:00-00:00", "利九牛舌（備選）", ["飲食"], 1], ["21:00-00:00", "APOC Coffee（備選）", ["飲食"], 1], ["21:00-23:00", "長浜拉麵（備選）", ["飲食"], 0], ["21:30-22:00", "NAMCO", ["其他"], 1]]}, {"d": "3/6", "t": "糸島一日遊", "e": [["08:58-10:09", "博多⮕糸島", ["交通", "景點"], 1], ["10:09-11:00", "二見ヶ浦海岸", ["景點"], 1], ["11:00-12:00", "早餐：糸島海鮮堂 二見ヶ浦本店", ["飲食"], 0], ["12:19-13:15", "巴士⮕Palm Tree Swing", ["交通", "景點"], 1], ["13:15-14:15", "午餐：燒蠔 Karatomari Ebisu Oyster Hut", ["飲食"], 1], ["14:38-15:24", "糸島⮕天神", ["交通"], 0], ["15:45-16:30", "Cafe Bimi", ["飲食"], 1], ["16:00-16:30", "&Locals", ["飲食"], 0], ["16:30-17:30", "大濠公園＋Cafe", ["景點", "飲食"], 1], ["17:30-21:00", "LaLaport 福岡", ["購物"], 1]]}, {"d": "3/7", "t": "門司港・元乃隅", "e": [["07:00-19:00", "門司港／元乃隅神社 一日團", ["景點"], 0], ["19:00-20:00", "晚餐：Tonkatsu Wakaba 筑紫口店（備選）", ["飲食"], 1], ["19:00-20:15", "晚餐：博多名代 吉塚鰻魚屋（備選）", ["飲食"], 1], ["21:30-22:00", "NAMCO", ["其他"], 1]]}, {"d": "3/8", "t": "手信・回程", "e": [["08:45-09:45", "Dacomecca 麵包店", ["飲食"], 1], ["10:00-10:45", "早餐：Cafe Mutsukado", ["飲食"], 1], ["10:00-11:30", "博多車站（買手信）", ["購物"], 1], ["12:00-15:00", "福岡機場", ["購物"], 0], ["16:05-19:00", "福岡⮕香港快運⮕香港 (UO749)", ["交通"], 0]]}];const lists={"pre": [["護照（確認到期日）", 0], ["機票", 1], ["住宿", 1], ["保險", 1], ["網上簽證", 1], ["電話卡", 1], ["信用卡", 1], ["現金（港幣）", 1], ["現金（日元）", 1]], "chk": [["換洗衣物", 0], ["盥洗用具", 0], ["化妝保養用品", 0], ["枕頭袋", 0], ["遮", 0], ["紙巾", 0], ["環保袋", 0], ["指甲鉗", 0], ["電水樽", 0], ["叉電器", 0], ["叉電線", 0], ["Airtag", 0], ["藥物", 0], ["川貝枇杷膏", 0], ["賢者之食卓", 0], ["垃圾袋", 0]], "carry": [["護照", 0], ["身份證", 0], ["錢包、信用卡、現金", 0], ["Keycard", 0], ["電話卡", 0], ["充電器", 1], ["行動電源", 1], ["iPad", 1], ["相機", 1], ["相機電池", 1], ["電子書", 1], ["太陽眼鏡", 1], ["帽", 1]]};
+const START=new Date("2025-03-01T12:55:00+08:00");
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+function tick(){const diff=START-Date.now(),el=document.getElementById("count");
+if(diff<=0){el.innerHTML=`<div><b>✓</b>旅程已完成</div><div><b>${Math.floor(-diff/864e5)}</b>天前出發</div>`;return}
+const s=Math.floor(diff/1e3);el.innerHTML=[[Math.floor(s/86400),"天"],[Math.floor(s%86400/3600),"時"],[Math.floor(s%3600/60),"分"]].map(x=>`<div><b>${x[0]}</b>${x[1]}</div>`).join("")}
+function clean(n){return n.replace(/^[^：]*：/,"").replace(/（備選）/,"")}
+function show(i){const tabs=document.getElementById("tabs");[...tabs.children].forEach((b,j)=>b.classList.toggle("on",i==j));
+document.getElementById("tl").innerHTML=`<p style="margin-bottom:10px">Day ${i+1}｜${days[i].t}</p>`+days[i].e.map((x,k)=>{
+const must=x[2].includes("景點");
+const map=x[3]?`<a class="map" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(clean(x[1])+" 福岡")}">地圖</a>`:"";
+return `<div class="ev pop" style="animation-delay:${Math.min(k,12)*50}ms"><div class="time">${x[0]}</div><h3>${x[1]}${must?'<span class="must">必去</span>':''}</h3>${x[2].map(c=>`<span class="tag ${c}">${c}</span>`).join("")} ${map}</div>`}).join("")}
+function init(){
+try{tick()}catch(e){}
+const tabs=document.getElementById("tabs");
+days.forEach((x,i)=>{const b=document.createElement("button");b.innerHTML=`Day ${i+1}<br><small>${x.d}</small>`;b.onclick=()=>show(i);tabs.appendChild(b)});
+show(0);
+Object.keys(lists).forEach(k=>{const ul=document.getElementById(k+"-l"),bar=document.getElementById("b-"+k);
+let st;try{st=JSON.parse(store.get("fk-"+k))}catch(e){}
+st=st||Object.fromEntries(lists[k].map((x,i)=>[i,!!x[1]]));
+const up=()=>{bar.style.width=lists[k].filter((_,i)=>st[i]).length/lists[k].length*100+"%"};
+lists[k].forEach((t,i)=>{const li=document.createElement("li");li.innerHTML=`<label><input type="checkbox"><span>${t[0]}</span></label>`;
+const c=li.querySelector("input");c.checked=!!st[i];
+c.onchange=()=>{st[i]=c.checked;store.set("fk-"+k,JSON.stringify(st));up()};ul.appendChild(li)});up()})}
+init();
+</script></body></html>
